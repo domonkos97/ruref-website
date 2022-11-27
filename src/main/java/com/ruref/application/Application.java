@@ -1,13 +1,13 @@
-package org.ruref.application;
+package com.ruref.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RurefApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RurefApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
