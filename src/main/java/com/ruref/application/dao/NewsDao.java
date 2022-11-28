@@ -5,6 +5,7 @@ import com.ruref.application.model.NewsStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public class NewsDao implements INewsDao{
@@ -21,7 +22,7 @@ public class NewsDao implements INewsDao{
     }
 
     @Override
-    public News getNewsById(UUID id) {
+    public Optional<News> getNewsById(UUID id) {
         return newsStorage.getNewsById(id);
     }
 
