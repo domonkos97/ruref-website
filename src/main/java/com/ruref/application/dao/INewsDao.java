@@ -1,5 +1,6 @@
 package com.ruref.application.dao;
 
+import com.ruref.application.exceptions.NewsNotFoundError;
 import com.ruref.application.model.News;
 
 import java.util.List;

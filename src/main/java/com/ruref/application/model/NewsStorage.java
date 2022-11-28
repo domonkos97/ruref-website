@@ -1,5 +1,7 @@
 package com.ruref.application.model;
 
+import com.ruref.application.exceptions.NewsNotFoundError;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -25,7 +27,7 @@ public class NewsStorage {
             newsToUpdate.setDateOfArticle(news.getDateOfArticle());
         });
     }
-    public void deleteNews(UUID id){
-        throw new UnsupportedOperationException();
+    public void deleteNews(UUID id) {
+        getNewsById(id).ifPresent(transactionToDelete -> newsList.remove(transactionToDelete));
     }
 }
