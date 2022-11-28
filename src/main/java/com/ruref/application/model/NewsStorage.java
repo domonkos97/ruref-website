@@ -9,16 +9,16 @@ public class NewsStorage {
     public List<News> getAllNews(){
         throw new UnsupportedOperationException();
     }
-    public List<News> getNewsById(UUID id){
+    public News getNewsById(UUID id){
         throw new UnsupportedOperationException();
     }
-    public List<News> addNews(News news){
+    public void addNews(News news){
         throw new UnsupportedOperationException();
     }
-    public List<News> updateNews(UUID id, News news){
+    public void updateNews(UUID id, News news){
         throw new UnsupportedOperationException();
     }
-    public List<News> deleteNews(UUID id){
+    public void deleteNews(UUID id){
         throw new UnsupportedOperationException();
     }
 }
