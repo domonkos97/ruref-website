@@ -1,24 +1,34 @@
 package com.ruref.application.service;
 
+import com.ruref.application.dao.NewsDao;
 import com.ruref.application.model.News;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.UUID;
 
 public class NewsService {
+
+    NewsDao newsDao;
+
+    @Autowired
+    public NewsService(NewsDao newsDao) {
+        this.newsDao = newsDao;
+    }
+
     public List<News> getAllNews(){
-        throw new UnsupportedOperationException();
+        return newsDao.getAllNews();
     }
     public News getNewsById(UUID id){
-        throw new UnsupportedOperationException();
+        return newsDao.getNewsById(id);
     }
     public void addNews(News news){
-        throw new UnsupportedOperationException();
+        newsDao.addNews(news);
     }
     public void updateNews(UUID id, News news){
-        throw new UnsupportedOperationException();
+        newsDao.updateNews(id, news);
     }
     public void deleteNews(UUID id){
-        throw new UnsupportedOperationException();
+        newsDao.deleteNews(id);
     }
 }
