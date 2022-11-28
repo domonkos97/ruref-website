@@ -1,24 +1,33 @@
 package com.ruref.application.model;
 
+import com.ruref.application.exceptions.NewsNotFoundError;
+
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public class NewsStorage {
-    private List<News> news;
+    private List<News> newsList;
 
     public List<News> getAllNews(){
-        throw new UnsupportedOperationException();
+        return newsList;
     }
-    public News getNewsById(UUID id){
-        throw new UnsupportedOperationException();
+    public Optional<News> getNewsById(UUID id){
+        return newsList.stream().filter(news -> news.getId() == id).findFirst();
     }
     public void addNews(News news){
-        throw new UnsupportedOperationException();
+        newsList.add(news);
     }
     public void updateNews(UUID id, News news){
-        throw new UnsupportedOperationException();
+        getNewsById(id).ifPresent(newsToUpdate -> {
+            newsToUpdate.setTitle(news.getTitle());
+            newsToUpdate.setBody(news.getBody());
+            newsToUpdate.setAuthor(news.getAuthor());
+            newsToUpdate.setCategory(news.getCategory());
+            newsToUpdate.setDateOfArticle(news.getDateOfArticle());
+        });
     }
-    public void deleteNews(UUID id){
-        throw new UnsupportedOperationException();
+    public void deleteNews(UUID id) {
+        getNewsById(id).ifPresent(transactionToDelete -> newsList.remove(transactionToDelete));
     }
 }
