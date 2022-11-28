@@ -5,19 +5,25 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class NewsStorage {
-    private List<News> news;
+    private List<News> newsList;
 
     public List<News> getAllNews(){
-        return news;
+        return newsList;
     }
     public Optional<News> getNewsById(UUID id){
-        return news.stream().filter(news -> news.getId() == id).findFirst();
+        return newsList.stream().filter(news -> news.getId() == id).findFirst();
     }
     public void addNews(News news){
-        throw new UnsupportedOperationException();
+        newsList.add(news);
     }
     public void updateNews(UUID id, News news){
-        throw new UnsupportedOperationException();
+        getNewsById(id).ifPresent(newsToUpdate -> {
+            newsToUpdate.setTitle(news.getTitle());
+            newsToUpdate.setBody(news.getBody());
+            newsToUpdate.setAuthor(news.getAuthor());
+            newsToUpdate.setCategory(news.getCategory());
+            newsToUpdate.setDateOfArticle(news.getDateOfArticle());
+        });
     }
     public void deleteNews(UUID id){
         throw new UnsupportedOperationException();
