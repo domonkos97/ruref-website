@@ -5,16 +5,21 @@ import com.ruref.application.repository.NewsRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
-@RequiredArgsConstructor
 @Service
 public class NewsService {
 
     private final NewsRepository repository;
+
+    @Autowired
+    public NewsService(NewsRepository repository) {
+        this.repository = repository;
+    }
 
     public List<NewsModel> getAllNews(){
         return repository.findAll();

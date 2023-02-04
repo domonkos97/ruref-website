@@ -2,22 +2,18 @@ package com.ruref.application.model;
 
 import com.ruref.application.helpers.EventLocation;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Data
+@Setter
+@Getter@AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
-@AllArgsConstructor
-
 public class EventModel {
     @Id
+    @GeneratedValue
     private long id;
     private LocalDateTime startOfEvent;
     private LocalDateTime endOfEvent;
@@ -31,6 +27,6 @@ public class EventModel {
     private int reminderMinutesBefore;
     private String description;
 
-    public EventModel() {
-    }
 }
+
+
