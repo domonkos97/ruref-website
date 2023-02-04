@@ -19,7 +19,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class NewsModel {
     @Id
-    private long id;
+    private Long id;
     private LocalDate dateOfArticle;
     @Transient
     private UserModel author;
