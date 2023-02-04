@@ -1,8 +1,9 @@
 package com.ruref.application.helpers;
 
-import java.util.Locale;
+import jakarta.persistence.Entity;
 
-public class Location {
+@Entity
+public class EventLocation {
     private String country;
     private String city;
     private String zipCode;
