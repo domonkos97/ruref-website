@@ -5,6 +5,7 @@ import com.ruref.application.service.NewsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -19,6 +20,11 @@ public class NewsController {
     @GetMapping
     public List<NewsModel> getAllNews() {
         return service.getAllNews();
+    }
+
+    @GetMapping("/{id}")
+    public NewsModel getNewsById(@PathVariable Long id){
+        return service.getNewsById(id);
     }
 
 }
