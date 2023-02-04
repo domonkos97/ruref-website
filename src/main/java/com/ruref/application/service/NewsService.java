@@ -1,21 +1,21 @@
 package com.ruref.application.service;
 
-import com.ruref.application.model.News;
+import com.ruref.application.model.NewsModel;
 
 import java.util.List;
 import java.util.UUID;
 
 public class NewsService {
-    public List<News> getAllNews(){
+    public List<NewsModel> getAllNews(){
         throw new UnsupportedOperationException();
     }
-    public News getNewsById(UUID id){
+    public NewsModel getNewsById(UUID id){
         throw new UnsupportedOperationException();
     }
-    public void addNews(News news){
+    public void addNews(NewsModel news){
         throw new UnsupportedOperationException();
     }
-    public void updateNews(UUID id, News news){
+    public void updateNews(UUID id, NewsModel news){
         throw new UnsupportedOperationException();
     }
     public void deleteNews(UUID id){
