@@ -1,12 +1,10 @@
 package com.ruref.application.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Setter
@@ -19,7 +17,7 @@ public class NewsModel {
     private Long id;
     private LocalDate dateOfArticle;
     @OneToOne
-    private UserEntity author;
+    private UserModel author;
     private String title;
     private String body;
     @ElementCollection

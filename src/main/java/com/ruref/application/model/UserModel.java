@@ -12,7 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "user_entity")
-public class UserEntity {
+public class UserModel {
     @Id
     @GeneratedValue
     private long id;

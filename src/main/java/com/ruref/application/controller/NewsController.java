@@ -1,6 +1,7 @@
 package com.ruref.application.controller;
 
 import com.ruref.application.model.NewsModel;
+import com.ruref.application.model.dto.NewsDTO;
 import com.ruref.application.service.NewsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -16,7 +17,7 @@ public class NewsController {
     private final NewsService service;
 
     @GetMapping
-    public List<NewsModel> getAllNews() {
+    public List<NewsDTO> getAllNews() {
         return service.getAllNews();
     }
 
@@ -26,7 +27,7 @@ public class NewsController {
     }
 
     @PostMapping("/add")
-    public void addNews(@RequestBody NewsModel news) {
+    public void addNews(@RequestBody NewsDTO news) {
         service.addNews(news);
     }
 

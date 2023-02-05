@@ -1,6 +1,5 @@
 package com.ruref.application.model.dto;
 
-import com.ruref.application.model.UserEntity;
 import jakarta.persistence.ElementCollection;
 import lombok.*;
 
@@ -15,10 +14,10 @@ import java.util.List;
 public class NewsDTO {
     private Long id;
     private LocalDate dateOfArticle;
-    private UserEntity author;
+    private Long authorId;
     private String title;
     private String body;
     @ElementCollection
-    private List<String> category;
+    private List<String> categoryIds;
 
 }
