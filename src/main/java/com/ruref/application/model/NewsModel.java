@@ -18,8 +18,8 @@ public class NewsModel {
     @GeneratedValue
     private Long id;
     private LocalDate dateOfArticle;
-    @Transient
-    private UserModel author;
+    @OneToOne
+    private UserEntity author;
     private String title;
     private String body;
     @ElementCollection
