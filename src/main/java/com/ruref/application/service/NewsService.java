@@ -38,7 +38,7 @@ public class NewsService {
         NewsModel news = new NewsModel();
         news.setTitle(dto.getTitle());
         news.setBody(dto.getBody());
-//        news.setAuthor(userService.getUserById(dto.getAuthorId()));
+        news.setAuthor(userService.getUserById(dto.getAuthorId()));
         news.setCategory(dto.getCategoryIds());
         news.setDateOfArticle(dto.getDateOfArticle());
         repository.save(news);
