@@ -1,10 +1,9 @@
 import './App.css';
+import Home from "./routes/Home";
 
 function App() {
   return (
-    <div className="App">
-      <h3 className="logo">Ruref</h3>
-    </div>
+    <Home></Home>
   );
 }
 
