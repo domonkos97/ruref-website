@@ -1,6 +1,12 @@
-function NewsSection() {
+import NewsArticle from "./NewsArticle";
+
+function NewsSection( {news} ) {
     return (
-        <div></div>
+        <div>
+            {news.map((article) => (
+                <NewsArticle article={article}></NewsArticle>
+            ))}
+        </div>
     )
 }
 
