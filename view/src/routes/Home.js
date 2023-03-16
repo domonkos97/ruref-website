@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 function Home() {
     return (
-        <div className="hero-section h-screen bg-red-50 flex flex-col justify-between">
+        <div className="hero-section h-screen flex flex-col justify-between p-10">
             <Navbar/>
             <TitleCard />
             <Socials />
