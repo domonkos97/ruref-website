@@ -1,7 +1,7 @@
+import React from 'react';
 import './App.css';
 import Home from "./routes/Home";
 import {useEffect, useState} from "react";
-
 function App() {
     const [news, setNews] = useState([])
 
@@ -19,7 +19,9 @@ function App() {
 
 
     return (
-    <Home news={news}></Home>
+        <>
+            <Home></Home>
+        </>
     );
 }
 

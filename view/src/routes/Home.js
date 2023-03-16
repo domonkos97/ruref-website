@@ -1,10 +1,13 @@
-import NewsSection from "../components/NewsSection";
+import Socials from "../components/Socials";
+import TitleCard from "../components/TitleCard";
+import Navbar from "../components/Navbar";
 
-function Home( {news} ) {
+function Home() {
     return (
-        <div>
-            <NewsSection news={news}></NewsSection>
-
+        <div className="hero-section h-screen bg-red-50 flex flex-col justify-between">
+            <Navbar/>
+            <TitleCard />
+            <Socials />
         </div>
     )
 }
