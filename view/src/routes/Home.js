@@ -1,15 +1,16 @@
-import Socials from "../components/Socials";
-import TitleCard from "../components/TitleCard";
-import Navbar from "../components/Navbar";
-
+import Hero from "../components/Hero";
+import NewsSection from "../components/NewsSection";
 function Home() {
     return (
-        <div className="hero-section h-screen flex flex-col justify-between p-28">
-            <Navbar/>
-            <TitleCard />
-            <Socials />
+        <div>
+            <div className="bg-white w-full h-20 fixed z-1"></div>
+            <Hero />
+            <div className="h-8"></div>
+            <NewsSection/>
         </div>
-    )
+    );
+
 }
+
 
 export default Home
