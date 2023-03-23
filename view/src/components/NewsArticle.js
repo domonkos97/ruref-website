@@ -2,7 +2,7 @@ function NewsArticle( {article} ) {
     return (
         <div>
             <h3>{article.title}</h3>
-            <p>{article.body}</p>
+            <img src={article.photo} alt="photo"></img>
         </div>
     )
 }
