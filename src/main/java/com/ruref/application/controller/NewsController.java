@@ -18,6 +18,7 @@ public class NewsController {
 
     @GetMapping
     public List<NewsDTO> getAllNews() {
+        System.out.println(service.getAllNews());
         return service.getAllNews();
     }
 
