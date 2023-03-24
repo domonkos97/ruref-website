@@ -39,5 +39,32 @@ body, *, html {
 .picture {
     height: 450px;
     width: auto;
+    cursor: pointer;
+}
 
+.picture:hover {
+    filter: brightness(40%);
+}
+
+.picture-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+.picture-container:hover .title-news {
+    display: block;
+}
+
+.title-news {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    pointer-events: none    ;
 }

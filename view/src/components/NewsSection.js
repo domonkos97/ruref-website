@@ -44,10 +44,10 @@ function NewsSection({ news }) {
                     ))}
                 </div>
                 <div className="pictures flex justify-between gap-2">
-                    {news.slice(0, 1).map((article) => (
+                    {news.slice(3, 4).map((article) => (
                         <NewsArticle article={article}></NewsArticle>
                     ))}
-                    {news.slice(1, 2).map((article) => (
+                    {news.slice(2, 3).map((article) => (
                         <NewsArticle article={article}></NewsArticle>
                     ))}
                 </div>
