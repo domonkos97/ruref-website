@@ -35,3 +35,9 @@ body, *, html {
 .news-section {
     height: 100vh;
 }
+
+.picture {
+    height: 450px;
+    width: auto;
+
+}

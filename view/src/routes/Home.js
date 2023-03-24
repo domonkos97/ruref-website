@@ -5,8 +5,8 @@ function Home( {news} ) {
         <div>
             <Hero />
             <NewsSection news={news}/>
-            <div className="h-screen">
-                <p>Next Section</p>
+            <div className=" flex h-screen">
+                <p className="m-auto">Next Section</p>
             </div>
         </div>
     );

@@ -30,13 +30,20 @@ function NewsSection({ news }) {
             className="news-section flex flex-col items-center justify-center h-screen p-28 z-0"
             ref={myRef}
         >
-            <div className={`content ${myElementIsVisible ? "show" : "hidden"}`}>
-                <NewsTitleCard isVisible={myElementIsVisible} />
-                <div className="pictures flex">
+            <div className={`content ${myElementIsVisible ? "show" : "hidden"}`} >
+                <div className="pictures flex justify-between gap-2 mb-2">
                     {news.slice(0, 1).map((article) => (
                         <NewsArticle article={article}></NewsArticle>
                     ))}
+                    {news.slice(1, 2).map((article) => (
+                        <NewsArticle article={article}></NewsArticle>
+                    ))}
+                </div>
+                <div className="pictures flex justify-between gap-2">
                     {news.slice(0, 1).map((article) => (
+                        <NewsArticle article={article}></NewsArticle>
+                    ))}
+                    {news.slice(1, 2).map((article) => (
                         <NewsArticle article={article}></NewsArticle>
                     ))}
                 </div>
