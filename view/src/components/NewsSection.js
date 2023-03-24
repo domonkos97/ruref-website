@@ -12,12 +12,8 @@ function NewsSection({ news }) {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
             if (entry.intersectionRatio >= 0.3 && !myElementIsVisible) {
-                console.log("should do the effect - true");
-                console.log(entry.intersectionRatio);
                 setMyElementIsVisible(true);
             } else  {
-                console.log("should do the effect - false");
-                console.log(entry.intersectionRatio);
                 setMyElementIsVisible(false);
             }
         }, options);
