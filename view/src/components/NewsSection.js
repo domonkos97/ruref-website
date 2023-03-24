@@ -13,8 +13,12 @@ function NewsSection({ news }) {
             const entry = entries[0];
             if (entry.intersectionRatio >= 0.3 && !myElementIsVisible) {
                 setMyElementIsVisible(true);
-            } else  {
+                console.log(window.scrollY)
+                console.log(true)
+            } else if (window.scrollY < 1000) {
                 setMyElementIsVisible(false);
+                console.log(window.scrollY)
+                console.log(false)
             }
         }, options);
         observer.observe(myRef.current);

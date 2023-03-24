@@ -6,7 +6,7 @@ function Home( {news} ) {
             <Hero />
             <NewsSection news={news}/>
             <div className=" flex h-screen">
-                <p className="m-auto">Next Section</p>
+                <p className="m-auto">Events</p>
             </div>
         </div>
     );
