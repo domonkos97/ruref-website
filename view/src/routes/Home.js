@@ -3,10 +3,12 @@ import NewsSection from "../components/NewsSection";
 function Home( {news} ) {
     return (
         <div>
-            <div className="bg-white w-full h-20 fixed z-1"></div>
             <Hero />
             <div className="h-8"></div>
             <NewsSection news={news}/>
+            <div className="h-screen">
+                <p>Next Section</p>
+            </div>
         </div>
     );
 
