@@ -3,13 +3,11 @@ import {useEffect, useState} from "react";
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
-    console.log(isScrolled)
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
         function handleScroll() {
             // keep current scroll position
             let currentScroll = window.scrollY;
-            console.log(currentScroll)
             if (currentScroll > prevScrollPos && currentScroll > 130) {
                 setIsScrolled(true)
             } else {

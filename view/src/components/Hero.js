@@ -7,7 +7,7 @@ function Hero() {
     const heroRef = useRef();
     const [myElementIsVisible, setMyElementIsVisible] = useState(false);
     let options = {
-        threshold: 0.85,
+        threshold: 0.7,
     };
     useEffect(() => {
         const observer = new IntersectionObserver((entries)=> {
