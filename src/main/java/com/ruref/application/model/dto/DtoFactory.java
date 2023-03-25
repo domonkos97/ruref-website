@@ -12,6 +12,7 @@ public class DtoFactory {
         dto.setBody(newsModel.getBody());
 //        dto.setCategoryIds(newsModel.getCategory());
         dto.setDateOfArticle(newsModel.getDateOfArticle());
+        dto.setPhoto(newsModel.getPhoto());
         return dto;
     }
 

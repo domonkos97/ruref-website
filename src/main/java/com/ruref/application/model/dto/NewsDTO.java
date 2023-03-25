@@ -19,5 +19,6 @@ public class NewsDTO {
     private String body;
     @ElementCollection
     private List<String> categoryIds;
+    private String photo;
 
 }

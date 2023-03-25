@@ -22,4 +22,6 @@ public class NewsModel {
     private String body;
     @ElementCollection
     private List<String> category;
+
+    private String photo;
 }

@@ -1,12 +1,13 @@
 import Hero from "../components/Hero";
 import NewsSection from "../components/NewsSection";
-function Home() {
+function Home( {news} ) {
     return (
         <div>
-            <div className="bg-white w-full h-20 fixed z-1"></div>
             <Hero />
-            <div className="h-8"></div>
-            <NewsSection/>
+            <NewsSection news={news}/>
+            <div className=" flex h-screen">
+                <p className="m-auto">Events</p>
+            </div>
         </div>
     );
 

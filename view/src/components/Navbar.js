@@ -3,13 +3,11 @@ import {useEffect, useState} from "react";
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
-    console.log(isScrolled)
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
         function handleScroll() {
             // keep current scroll position
             let currentScroll = window.scrollY;
-            console.log(currentScroll)
             if (currentScroll > prevScrollPos && currentScroll > 130) {
                 setIsScrolled(true)
             } else {
@@ -34,7 +32,7 @@ function Navbar() {
     return (
         <>
         <div className="h-40px"></div>
-        <div className={`navbar flex justify-between items-center z-2 fixed w-full p-56  ${isScrolled ? 'hidden' : ''} fixed w-full`}>
+        <div className={`navbar flex justify-between items-center z-2 fixed w-full pr-56  ${isScrolled ? 'hidden' : ''} fixed w-full`}>
 
             <div className="menu flex justify-between text-s ">
                 <div className="p-3 hover:underline cursor-pointer">Bio</div>
