@@ -122,3 +122,15 @@ body, *, html {
     width: 1000px;
 }
 
+.event-items {
+    flex-grow: 3;
+}
+
+.event-title {
+    flex-grow: 1;
+}
+
+.descriptions{
+    width: 700px;
+}
+
