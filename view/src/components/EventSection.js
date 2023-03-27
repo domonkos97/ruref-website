@@ -8,12 +8,12 @@ function EventSection( {events} ) {
                         <p className="event-title text-2xl uppercase">Upcoming Events</p>
                         <div className="event-items flex flex-col p-4">
                             {events.map((event) => (
-                                <div key={event.id} className="event flex flex-row justify-between leading-10 pb-8 items-end align-left ">
-                                    <div className="w-40">
+                                <div key={event.id} className="event flex flex-row justify-between pb-8 items-end align-left ">
+                                    <div className="w-60">
                                         <p className="event-title text-black uppercase text-xs cursor-pointer ">{event.title}</p>
                                     </div>
                                     <div className="descriptions">
-                                        <p className="event-description text-2xl">{event.description}</p>
+                                        <p className="event-description text-l">{event.description}</p>
                                     </div>
                                     <div className="w-40 text-right">
                                         <p className="event-description text-xs uppercase bold">{event.date}</p>

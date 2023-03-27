@@ -15,45 +15,45 @@ function App() {
 
     const events = [
         {
-            'title': "Bach koncert",
-            'date': "25 augusztus 2023",
-            'description': "Aza rany Janos utca templomban.",
+            'title': "temetési istentisztelet",
+            'date': "29 március 2023",
+            'description': "Demeter Béláné temetése lesz 6 órakor az Arany János utcai templomban",
             'id': 1
         },
         {
-            'title': "istentisztelet a MÁV-telepen",
-            'date': "27 szeptember 2023",
-            'description': "A szokott rend szerint.",
+            'title': "nyugdijasok biblióáraja",
+            'date': "31 március 2023",
+            'description': "11 órakor a Gyülekezeti teremben",
             'id': 2
         },
         {
-            'title': "gyermekistentisztelet",
-            'date': "2 november 2023",
-            'description': "Ahogy azt kell.",
+            'title': "kóruspróba",
+            'date': "1 április 2023",
+            'description': "Minden szombaton 6 órakor a Gyülekezeti teremben",
             'id': 3
         },
         {
-            'title': "istentisztelet az Arany János utcában",
-            'date': "11 februar 2024",
-            'description': "Minden vasarnap.",
+            'title': "virágvasárnapi istentisztelet",
+            'date': "2 április 2023",
+            'description': "Jézusnak diadalmas jeruzsálemi bevonulására emlékezünk",
             'id': 4
         },
         {
-            'title': "Kirandulas",
-            'date': "8 marcius 2024",
-            'description': "ide verek oda verek, itt vannak a puloverek",
+            'title': "nagyheti előkészitő",
+            'date': "4 április 2023",
+            'description': "Minden hétköznap, nagypéntekig bezarólag a gyülekezeti teremben",
             'id': 1
         },
         {
-            'title': "Summer Camp",
-            'date': "8 marcius 2024",
-            'description': "This scooby doo themed camp will be fun for the kids.",
+            'title': "nagypénteki istentisztelet",
+            'date': "7 április 2023",
+            'description': "Emlekezzünk együtt Jézus kereszthalálára, pénteken 10 órakor az Arany János utcai templomban",
             'id': 2
         },
         {
-            'title': "An event in the far future",
-            'date': "8 marcius 2024",
-            'description': "The year is 2066 and earth is uninhabitable.",
+            'title': "kóruspróba",
+            'date': "8 április 2023",
+            'description': "Minden szombaton 6 órakor a Gyülekezeti teremben",
             'id': 3
         },
     ]
