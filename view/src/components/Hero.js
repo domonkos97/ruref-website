@@ -13,14 +13,21 @@ function Hero() {
         const observer = new IntersectionObserver((entries)=> {
             const entry = entries[0]
             setMyElementIsVisible(entry.isIntersecting);
+            if (!entry.isIntersecting) {
+                heroRef.current.classList.add("bg-white")
+            }else {
+                heroRef.current.classList.remove("bg-white")
+            }
         }, options)
         observer.observe(heroRef.current)
     }, [])
     return (
-        <div className="hero-section h-screen flex flex-col justify-between p-28" ref={heroRef} >
+        <div className={`hero-section h-screen flex flex-col justify-between p-28 bg-default ${
+                !myElementIsVisible ? 'white-bg' : ''
+            } transition-colors duration-1000`} ref={heroRef} >
             <Navbar />
             <TitleCard isVisible={myElementIsVisible}/>
-            <Socials isVisible={myElementIsVisible}/>
+            {/*<Socials isVisible={myElementIsVisible}/>*/}
         </div>
     );
 }

@@ -99,7 +99,6 @@ body, *, html {
 .picture-container {
     height: 450px;
     overflow: hidden;
-    background: blueviolet;
 }
 
 .picture-container:hover img {
@@ -132,5 +131,23 @@ body, *, html {
 
 .descriptions{
     width: 700px;
+}
+
+.bg-default {
+    background: #F5F2EC;
+}
+
+.white-bg {
+    background: white;
+}
+
+.red-text-color {
+    color: #A94C2E;
+}
+
+.big-text {
+    font-size: 300px;
+    font-weight: bold;
+    padding-top: 0;
 }
 

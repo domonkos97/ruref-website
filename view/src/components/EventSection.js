@@ -3,7 +3,7 @@ function EventSection( {events} ) {
         <div className=" flex">
             <div className="h-4/5 w-4/5  m-auto py-28">
                 <div className="events-container">
-                    <hr className="h-px my-8 bg-gray-700 border-0 "></hr>
+                    <hr className="h-px my-8 bg-gray-700 border-0"></hr>
                     <div className="events flex justify-between p-2">
                         <p className="event-title text-2xl uppercase">Upcoming Events</p>
                         <div className="event-items flex flex-col p-4">
