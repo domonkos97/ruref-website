@@ -134,7 +134,7 @@ body, *, html {
 }
 
 .bg-default {
-    background: #F5F2EC;
+    background: #fffaf1;
 }
 
 .white-bg {
@@ -145,9 +145,29 @@ body, *, html {
     color: #A94C2E;
 }
 
+.grey-text-color {
+    color: #121012;
+}
+
 .big-text {
-    font-size: 300px;
+    font-size: 400px;
     font-weight: bold;
     padding-top: 0;
+}
+
+.secondary-text-color {
+    color: #BC757B;
+}
+
+.secondary-bg-color {
+    background: #BC757B;
+}
+
+.syne {
+    font-family: 'Syne', sans-serif;
+}
+
+.dm-sans{
+    font-family: 'DM Sans', sans-serif;
 }
 
