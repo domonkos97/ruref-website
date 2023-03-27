@@ -14,16 +14,16 @@ function Hero() {
             const entry = entries[0]
             setMyElementIsVisible(entry.isIntersecting);
             if (!entry.isIntersecting) {
-                heroRef.current.classList.add("bg-white")
+                heroRef.current.classList.add("bg-news")
             }else {
-                heroRef.current.classList.remove("bg-white")
+                heroRef.current.classList.remove("bg-news")
             }
         }, options)
         observer.observe(heroRef.current)
     }, [])
     return (
         <div className={`hero-section h-screen flex flex-col justify-between p-28 bg-default ${
-                !myElementIsVisible ? 'white-bg' : ''
+                !myElementIsVisible ? 'bg-news' : ''
             } transition-colors duration-1000`} ref={heroRef} >
             <Navbar />
             <TitleCard isVisible={myElementIsVisible}/>

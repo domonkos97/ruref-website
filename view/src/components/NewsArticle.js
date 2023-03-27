@@ -1,10 +1,8 @@
-function NewsArticle( {article, data} ) {
+function NewsArticle( {article, data, onMouseLeave, onMouseEnter, isHovered} ) {
     return (
-        <div className="picture-container">
+        <div className="picture-container" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <img className={`picture ${data}`} src={article.photo} alt="photo"></img>
             <div className="title-body-news flex justify-between">
-                <div className="title-news">{article.title}</div>
-                <div className="body-news">{article.body}</div>
             </div>
         </div>
     );
