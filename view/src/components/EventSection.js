@@ -1,8 +1,32 @@
+import {useEffect, useRef, useState} from "react";
+
 function EventSection( {events} ) {
+    const eventRef = useRef();
+    const [myElementIsVisible, setMyElementIsVisible] = useState(false);
+    let options = {
+        threshold: 0.3,
+    };
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            if (entry.isIntersecting) {
+                setMyElementIsVisible(true)
+            } else {
+                setMyElementIsVisible(false)
+            }
+        }, options);
+        observer.observe(eventRef.current);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
+    console.log("new ", myElementIsVisible)
     return (
-        <div className=" flex bg-news">
-            <div className="h-4/5 w-4/5  m-auto py-28">
-                <div className="events-container">
+        <div className="flex bg-news" ref={eventRef}>
+        <div className="h-4/5 w-4/5  m-auto py-28">
+                <div className={`events-container flex justify-content bg-news ${myElementIsVisible ? 'events-float-up' : 'events'}`} ref={eventRef}>
                     <hr className="h-px my-8 bg-gray-700 border-0"></hr>
                     <div className="events flex justify-between p-2">
                         <p className="event-title text-2xl uppercase">Upcoming Events</p>

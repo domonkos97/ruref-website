@@ -18,43 +18,43 @@ function App() {
             'title': "temetési istentisztelet",
             'date': "29 március 2023",
             'description': "Demeter Béláné temetése lesz 6 órakor az Arany János utcai templomban",
-            'id': 1
+            'id': 10
         },
         {
             'title': "nyugdijasok biblióáraja",
             'date': "31 március 2023",
             'description': "11 órakor a Gyülekezeti teremben",
-            'id': 2
+            'id': 20
         },
         {
             'title': "kóruspróba",
             'date': "1 április 2023",
             'description': "Minden szombaton 6 órakor a Gyülekezeti teremben",
-            'id': 3
+            'id': 30
         },
         {
             'title': "virágvasárnapi istentisztelet",
             'date': "2 április 2023",
             'description': "Jézusnak diadalmas jeruzsálemi bevonulására emlékezünk",
-            'id': 4
+            'id': 40
         },
         {
             'title': "nagyheti előkészitő",
             'date': "4 április 2023",
             'description': "Minden hétköznap, nagypéntekig bezarólag a gyülekezeti teremben",
-            'id': 1
+            'id': 50
         },
         {
             'title': "nagypénteki istentisztelet",
             'date': "7 április 2023",
             'description': "Emlekezzünk együtt Jézus kereszthalálára, pénteken 10 órakor az Arany János utcai templomban",
-            'id': 2
+            'id': 60
         },
         {
             'title': "kóruspróba",
             'date': "8 április 2023",
             'description': "Minden szombaton 6 órakor a Gyülekezeti teremben",
-            'id': 3
+            'id': 70
         },
     ]
 

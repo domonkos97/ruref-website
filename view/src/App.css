@@ -190,3 +190,14 @@ body, *, html {
 .title-news-right    {
     text-align: right;
 }
+
+.events-container {
+    opacity: 0.1;
+    transform: translateY(100px);
+}
+
+.events-float-up {
+    transition: transform 0.7s ease-in-out;
+    transform: translateY(0px); /* adjust the pixel value as needed */
+    opacity: 1;
+}
