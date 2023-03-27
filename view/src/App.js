@@ -40,7 +40,7 @@ function App() {
         },
         {
             'title': "nagyheti előkészitő",
-            'date': "4 április 2023",
+            'date': "4-6 április 2023",
             'description': "Minden hétköznap, nagypéntekig bezarólag a gyülekezeti teremben",
             'id': 50
         },
