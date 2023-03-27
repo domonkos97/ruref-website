@@ -35,8 +35,8 @@ function Navbar() {
         <div className={`navbar flex justify-between items-center z-2 fixed w-full pr-56  ${isScrolled ? 'hidden' : ''} fixed w-full`}>
 
             <div className="menu flex justify-between text-s ">
-                <div className="p-3 hover:underline cursor-pointer dm-sans">Bio</div>
-                <div className="p-3 hover:underline cursor-pointer dm-sans">Contact</div>
+                <div className="p-3 hover:underline cursor-pointer dm-sans">Rólunk</div>
+                <div className="p-3 hover:underline cursor-pointer dm-sans">Elérhetőségek</div>
             </div>
             <div  className={`hamburger h-5 w-5 flex flex-col justify-center items-end cursor-pointer ${
                 isOpen ? 'open' : ''

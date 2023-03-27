@@ -1,6 +1,6 @@
 function EventSection( {events} ) {
     return (
-        <div className=" flex">
+        <div className=" flex bg-news">
             <div className="h-4/5 w-4/5  m-auto py-28">
                 <div className="events-container">
                     <hr className="h-px my-8 bg-gray-700 border-0"></hr>
