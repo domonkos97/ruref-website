@@ -172,11 +172,19 @@ body, *, html {
 }
 
 .secondary-text-color {
-    color: #fde963;
+    color: #D99E90;
 }
 
 .secondary-bg-color {
-    background: #fde963;
+    background: #D99E90;
+}
+
+.blue-color {
+    color: #5A8B9A;
+}
+
+.blue-bg-color {
+    background: #5A8B9A;
 }
 
 .syne {
