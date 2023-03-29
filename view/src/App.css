@@ -1,6 +1,7 @@
 body, *, html {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    /*cursor: none;*/
 }
 
 .hidden{
@@ -38,7 +39,6 @@ body, *, html {
     height: 450px;
     width: 700px;
     object-fit: cover;
-    cursor: pointer;
     transition: transform .7s ease;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
@@ -120,7 +120,17 @@ body, *, html {
 .transformed-image {
     filter: grayscale(50%);
     transform: scale(1.05);
+    /*animation: opaque 0.25s ease-in-out forwards;*/
 }
+
+/*@keyframes opaque {*/
+/*    0% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*    100% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
 
 .one {
     width: 400px;
@@ -166,7 +176,7 @@ body, *, html {
 }
 
 .big-text {
-    font-size: 400px;
+    font-size: 325px;
     font-weight: bold;
     padding-top: 0;
 }
@@ -206,6 +216,30 @@ body, *, html {
 
 .events-float-up {
     transition: transform 0.7s ease-in-out;
-    transform: translateY(0px); /* adjust the pixel value as needed */
+    transform: translateY(0px);
     opacity: 1;
+}
+
+.hamburger:hover .bar-top {
+    margin-bottom: -12px;
+    transform: rotate(50%);
+    transition: margin-bottom 200ms ease-in-out;
+}
+
+.hamburger .bar-top {
+    transition: margin-bottom 200ms ease-in-out;
+}
+
+.cursor-dot {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 8px;
+    height: 8px;
+    background: #121012;
 }

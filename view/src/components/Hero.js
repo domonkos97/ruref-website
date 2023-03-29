@@ -22,7 +22,7 @@ function Hero() {
         observer.observe(heroRef.current)
     }, [])
     return (
-        <div className={`hero-section h-screen flex flex-col justify-between p-28 bg-default ${
+        <div className={`hero-section h-screen flex flex-col justify-between px-28 pt-28 bg-default ${
                 !myElementIsVisible ? 'bg-news' : ''
             } transition-colors duration-1000`} ref={heroRef} >
             <Navbar />

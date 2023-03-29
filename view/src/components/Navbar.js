@@ -38,10 +38,10 @@ function Navbar() {
                 <div className="p-3 hover:underline cursor-pointer dm-sans">Rólunk</div>
                 <div className="p-3 hover:underline cursor-pointer dm-sans">Elérhetőségek</div>
             </div>
-            <div  className={`hamburger h-5 w-5 flex flex-col justify-center items-end cursor-pointer ${
+            <div  className={`hamburger h-16 w-16 flex flex-col justify-center items-end cursor-pointer ${
                 isOpen ? 'open' : ''
             }`} onClick={handleClick}>
-                <span className="bar h-1 w-10 bg-black mb-1"></span>
+                <span className="bar bar-top h-1 w-10 bg-black mb-1"></span>
                 <span className="bar h-1 w-6 bg-black"></span>
             </div>
         </div>
