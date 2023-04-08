@@ -1,7 +1,7 @@
 body, *, html {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    /*cursor: none;*/
+    overflow-x: hidden;
 }
 
 .hidden{
@@ -32,7 +32,7 @@ body, *, html {
 }
 
 .news-section {
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .picture {
@@ -43,15 +43,6 @@ body, *, html {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
-
-/*.picture:hover {*/
-/*    filter: brightness(100%);*/
-/*    -ms-transform: scale(1.1);*/
-/*    -moz-transform: scale(1.1);*/
-/*    -webkit-transform: scale(1.1);*/
-/*    -o-transform: scale(1.1);*/
-/*    transform: scale(1.1);*/
-/*}*/
 
 .picture-container {
     position: relative;
@@ -71,7 +62,6 @@ body, *, html {
 }
 
 .title-body-news {
-    display: none;
     padding: 20px;
     background: #ffffff;
     position: absolute;
@@ -112,40 +102,10 @@ body, *, html {
     overflow: hidden;
 }
 
-/*.picture-container:hover img {*/
-/*    transform: scale(1.1);*/
-/*    filter: grayscale(30%);*/
-/*}*/
-
 .transformed-image {
     filter: grayscale(50%);
-    transform: scale(1.05);
-    /*animation: opaque 0.25s ease-in-out forwards;*/
 }
 
-/*@keyframes opaque {*/
-/*    0% {*/
-/*        opacity: 1;*/
-/*    }*/
-/*    100% {*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
-
-.one {
-    width: 400px;
-}
-
-.two {
-    width: 1000px;
-}
-.four {
-    width: 400px;
-}
-
-.three {
-    width: 1000px;
-}
 
 .event-items {
     flex-grow: 3;
@@ -176,9 +136,9 @@ body, *, html {
 }
 
 .big-text {
-    font-size: 325px;
+    font-size: 16vw;
     font-weight: bold;
-    padding-top: 0;
+    margin-bottom: 5vh;
 }
 
 .secondary-text-color {
@@ -230,16 +190,35 @@ body, *, html {
     transition: margin-bottom 200ms ease-in-out;
 }
 
-.cursor-dot {
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    width: 8px;
-    height: 8px;
-    background: #121012;
+
+@media screen and (max-width: 1472px) {
+    .ruref-text {
+        font-size: 15vw;
+    }
 }
+
+@media screen and (max-width: 1272px) {
+    .ruref-text {
+        font-size: 14vw;
+    }
+
+}
+
+@media screen and (max-width: 972px) {
+    .ruref-text {
+        font-size: 13vw;
+    }
+
+}@media screen and (max-width: 772px) {
+    .ruref-text {
+        font-size: 19vw;
+    }
+
+}
+
+.navbar {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+

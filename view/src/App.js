@@ -1,7 +1,7 @@
-import React from 'react';
 import './App.css';
 import Home from "./routes/Home";
 import {useEffect, useState} from "react";
+import React from 'react';
 function App() {
     const [news, setNews] = useState([])
     const getApi = async (url) => {
@@ -62,9 +62,7 @@ function App() {
 
 
     return (
-        <>
-            <Home news={news} events={events}></Home>
-        </>
+        <Home news={news} events={events}></Home>
     );
 }
 

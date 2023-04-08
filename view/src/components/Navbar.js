@@ -32,11 +32,11 @@ function Navbar() {
     return (
         <>
         <div className="h-40px"></div>
-        <div className={`navbar flex justify-between items-center z-2 fixed w-full pr-56  ${isScrolled ? 'hidden' : ''} fixed w-full`}>
+        <div className={`navbar flex  sm:justify-between justify-end items-center z-2 fixed w-full pr-28 pl-28 ${isScrolled ? 'hidden' : ''} fixed`}>
 
             <div className="menu flex justify-between text-s ">
-                <div className="p-3 hover:underline cursor-pointer dm-sans">Rólunk</div>
-                <div className="p-3 hover:underline cursor-pointer dm-sans">Elérhetőségek</div>
+                <div className="hidden sm:block p-3 pl-0 lg:pl-3 hover:underline cursor-pointer dm-sans">Rólunk</div>
+                <div className="hidden sm:block p-3 hover:underline cursor-pointer dm-sans">Elérhetőségek</div>
             </div>
             <div  className={`hamburger h-16 w-16 flex flex-col justify-center items-end cursor-pointer ${
                 isOpen ? 'open' : ''

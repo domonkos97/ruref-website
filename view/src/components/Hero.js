@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import TitleCard from "./TitleCard";
-import Socials from "./Socials";
 import {useEffect, useRef, useState} from "react";
 
 function Hero() {
@@ -22,7 +21,7 @@ function Hero() {
         observer.observe(heroRef.current)
     }, [])
     return (
-        <div className={`hero-section h-screen flex flex-col justify-between px-28 pt-28 bg-default ${
+        <div className={`hero-section h-screen flex flex-col justify-between px-12 lg:px-28 pt-28 bg-default ${
                 !myElementIsVisible ? 'bg-news' : ''
             } transition-colors duration-1000`} ref={heroRef} >
             <Navbar />

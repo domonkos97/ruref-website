@@ -73,32 +73,50 @@ function NewsSection({ news }) {
 
     return (
         <div
-            className={`news-section flex flex-col items-center justify-center h-full bg-default p-28 pb-80 ${
-                myElementIsVisible ? 'bg-news' : ''
-            } transition-colors duration-1000`}
+            className={`news-section flex  flex-col items-center justify-center h-full bg-default p-28 pb-80 transition-colors duration-1000
+                        ${myElementIsVisible ? 'bg-news' : ''}
+                        `}
             ref={myRef}
         >
-            <div className={`content ${myElementIsVisible ? 'show' : 'hidden'}`}>
-                <div className="pictures grid grid-cols-4 gap-4">
+            <div className={`news-content 
+                             ${myElementIsVisible ? 'show' : 'hidden'}
+                            `}>
+                <div className="pictures grid grid-cols-1 md:grid-cols-4 lg:gap-4">
                     <div>
                         {news.slice(0, 1).map((article) => (
-                            <NewsArticle article={article} data="one" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isHovered={isHovered1}></NewsArticle>
+                            <NewsArticle article={article}
+                                         data="one"
+                                         onMouseEnter={handleMouseEnter}
+                                         onMouseLeave={handleMouseLeave}
+                                         isHovered={isHovered1}>
+                            </NewsArticle>
                         ))}
                     </div>
                     <div>
                         {news.slice(1, 2).map((article) => (
-                            <NewsArticle article={article} data="two" onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2} isHovered={isHovered2}></NewsArticle>
+                            <NewsArticle article={article}
+                                         data="two"
+                                         onMouseEnter={handleMouseEnter2}
+                                         onMouseLeave={handleMouseLeave2}
+                                         isHovered={isHovered2}>
+                            </NewsArticle>
                         ))}
                     </div>
-                    <div className="hover:cursor-pointer flex flex-col justify-between duration-500 ease-in-out" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <div className="flex-col justify-between duration-500 ease-in-out hidden md:inline"
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}>
                         {news.slice(0, 1).map((article) => (
                             <>
-                                <div className={`transform-this ${isHovered1 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news syne text-gray-300`}>{article.body}</div>
+                                <div className={`body-news syne text-gray-300
+                                                 ${isHovered1 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'} 
+                                                 `}>
+                                    {article.body}
+                                </div>
                                 <div className="title-news syne text-gray-400">{article.title}</div>
                             </>
                         ))}
                     </div>
-                    <div className="hover:cursor-pointer flex flex-col justify-between duration-500 ease-in-out" onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
+                    <div className="hover:cursor-pointer flex flex-col justify-between duration-500 ease-in-out hidden lg:inline" onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
                         {news.slice(1, 2).map((article) => (
                             <>
                                 <div className={`transform-this ${isHovered2 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news syne text-gray-300`}>{article.body}</div>
@@ -106,17 +124,17 @@ function NewsSection({ news }) {
                             </>
                             ))}
                     </div>
-                    <div className="row-start-2 col-start-3">
+                    <div className="lg:row-start-2 lg:col-start-3">
                         {news.slice(2, 3).map((article) => (
                             <NewsArticle article={article} data="three" onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3} isHovered={isHovered3}></NewsArticle>
                         ))}
                     </div>
-                    <div  className="row-start-2 col-start-4">
+                    <div  className="lg:row-start-2 lg:col-start-4">
                         {news.slice(3, 4).map((article) => (
                             <NewsArticle article={article} data="four" onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4} isHovered={isHovered4}></NewsArticle>
                         ))}
                     </div>
-                    <div className="hover:cursor-pointer flex flex-col justify-between row-start-2 col-start-1 duration-500 ease-in-out" onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
+                    <div className="hover:cursor-pointer flex flex-col justify-between lg:row-start-2 lg:col-start-1 duration-500 ease-in-out hidden lg:inline" onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
                         {news.slice(2, 3).map((article) => (
                             <>
                                 <div className="title-news-right syne text-gray-400">{article.title}</div>
@@ -124,7 +142,7 @@ function NewsSection({ news }) {
                             </>
                         ))}
                     </div>
-                    <div className="hover:cursor-pointer flex flex-col justify-between row-start-2 col-start-2 duration-500 ease-in-out" onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4}>
+                    <div className="hover:cursor-pointer flex flex-col justify-between lg:row-start-2 lg:col-start-2 duration-500 ease-in-out hidden lg:inline" onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4}>
                         {news.slice(3, 4).map((article) => (
                             <>
                                 <div className="title-news-right syne text-gray-400">{article.title}</div>

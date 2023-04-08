@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "react-parallax": "^3.5.1"
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.9.0"
   }
 }
