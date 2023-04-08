@@ -31,8 +31,8 @@ function Navbar() {
 
     return (
         <>
-        <div className="h-40px"></div>
-        <div className={`navbar flex  sm:justify-between justify-end items-center z-2 fixed w-full pr-28 pl-28 ${isScrolled ? 'hidden' : ''} fixed`}>
+        <div className=""></div>
+        <div className={`navbar flex  sm:justify-between justify-end items-center z-10 fixed w-full pr-28 pl-28 ${isScrolled ? 'hidden' : ''} fixed`}>
 
             <div className="menu flex justify-between text-s ">
                 <div className="hidden sm:block p-3 pl-0 lg:pl-3 hover:underline cursor-pointer dm-sans">Rólunk</div>

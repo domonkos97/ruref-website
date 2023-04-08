@@ -1,7 +1,7 @@
 import NewsArticle from "./NewsArticle";
 import {useEffect, useRef, useState} from "react";
 
-function NewsSection({ news }) {
+function NewsSection({ news, myHomeElementIsVisible }) {
 
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
@@ -51,14 +51,10 @@ function NewsSection({ news }) {
             const entry = entries[0];
             if (entry.intersectionRatio >= 0.3 && !myElementIsVisible) {
                 setMyElementIsVisible(true);
-                myRef.current.classList.add('bg-news');
                 console.log(window.scrollY);
-                console.log(true);
             } else if (window.scrollY < 1000) {
                 setMyElementIsVisible(false);
-                myRef.current.classList.remove('bg-news');
                 console.log(window.scrollY);
-                console.log(false);
             }
         }, options);
         observer.observe(myRef.current);
@@ -74,7 +70,7 @@ function NewsSection({ news }) {
     return (
         <div
             className={`news-section flex  flex-col items-center justify-center h-full bg-default p-28 pb-80 transition-colors duration-1000
-                        ${myElementIsVisible ? 'bg-news' : ''}
+                        ${myHomeElementIsVisible && 'bg-news'}
                         `}
             ref={myRef}
         >

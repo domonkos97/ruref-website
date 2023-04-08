@@ -4,7 +4,7 @@ body, *, html {
     overflow-x: hidden;
 }
 
-.hidden{
+.anything{
     animation: hide 1s ease-in;
 }
 
@@ -220,5 +220,11 @@ body, *, html {
     left: 50%;
     transform: translateX(-50%);
 }
+
+.hidden-no-transformation {
+    display: none;
+}
+
+
 
 
