@@ -33,17 +33,35 @@ function EventSection( {events} ) {
                     <div className="events flex justify-between p-2">
                         <div className="event-items flex flex-col p-4">
                             {events.map((event) => (
-                                <div key={event.id} className="event flex flex-row justify-between pb-8 items-end align-left ">
-                                    <div className="w-60">
+                                <div key={event.id} className="event lg:block hidden lg:flex flex-row justify-between pb-8 items-end align-left ">
+                                    <div className="w-60 mr-8 ">
                                         <p className="event-title text-black uppercase text-s cursor-pointer syne">{event.title}</p>
                                     </div>
                                     <div className="descriptions">
                                         <p className="event-description text-xl syne">{event.description}</p>
                                     </div>
-                                    <div className="w-40 text-right">
+                                    <div className="w-40 lg:text-right ml-8">
                                         <p className="event-description text-s syne uppercase bold">{event.date}</p>
                                     </div>
                                 </div>
+
+
+                            ))}
+                            {events.map((event) => (
+                                <div key={event.id} className="event-mobile lg:hidden lg:flex flex-row justify-between pb-8 items-end align-left ">
+                                    <div className="w-full mr-8 ">
+                                        <p className="event-title text-black uppercase text-s cursor-pointer syne inline text-s bolder">{event.title} | </p>
+                                        <p className="event-description text-s syne uppercase bold inline text-s" >{event.date}</p>
+
+                                    </div>
+                                    <div className="w-40 lg:text-right ml-8">
+                                    </div>
+                                    <div className="descriptions">
+                                        <p className="event-description text-xl syne flex-wrap">{event.description}</p>
+                                    </div>
+                                </div>
+
+
                             ))}
                         </div>
 

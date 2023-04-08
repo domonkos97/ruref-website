@@ -69,7 +69,7 @@ function NewsSection({ news, myHomeElementIsVisible }) {
 
     return (
         <div
-            className={`news-section flex  flex-col items-center justify-center h-full bg-default p-28 pb-80 transition-colors duration-1000
+            className={`news-section flex  flex-col items-center justify-center h-full bg-default p-28 transition-colors duration-1000
                         ${myHomeElementIsVisible && 'bg-news'}
                         `}
             ref={myRef}
