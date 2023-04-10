@@ -51,10 +51,8 @@ function NewsSection({ news, myHomeElementIsVisible }) {
             const entry = entries[0];
             if (entry.intersectionRatio >= 0.3 && !myElementIsVisible) {
                 setMyElementIsVisible(true);
-                console.log(window.scrollY);
             } else if (window.scrollY < 1000) {
                 setMyElementIsVisible(false);
-                console.log(window.scrollY);
             }
         }, options);
         observer.observe(myRef.current);
@@ -69,7 +67,7 @@ function NewsSection({ news, myHomeElementIsVisible }) {
 
     return (
         <div
-            className={`news-section flex  flex-col items-center justify-center h-full bg-default p-28 transition-colors duration-1000
+            className={`news-section flex  flex-col items-center justify-center p-28 bg-default transition-colors duration-1000
                         ${myHomeElementIsVisible && 'bg-news'}
                         `}
             ref={myRef}
@@ -77,7 +75,7 @@ function NewsSection({ news, myHomeElementIsVisible }) {
             <div className={`news-content 
                              ${myElementIsVisible ? 'show' : 'hidden'}
                             `}>
-                <div className="pictures grid grid-cols-1 md:grid-cols-4 lg:gap-4">
+                <div className="pictures grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div>
                         {news.slice(0, 1).map((article) => (
                             <NewsArticle article={article}
@@ -98,26 +96,26 @@ function NewsSection({ news, myHomeElementIsVisible }) {
                             </NewsArticle>
                         ))}
                     </div>
-                    <div className="flex-col justify-between duration-500 ease-in-out hidden md:inline"
+                    <div className="hover:cursor-pointer duration-500 ease-in-out hidden md:inline"
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}>
                         {news.slice(0, 1).map((article) => (
-                            <>
+                            <div className="flex flex-col justify-between h-full">
                                 <div className={`body-news syne text-gray-300
-                                                 ${isHovered1 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'} 
+                                                 ${isHovered1 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}
                                                  `}>
                                     {article.body}
                                 </div>
                                 <div className="title-news syne text-gray-400">{article.title}</div>
-                            </>
+                            </div>
                         ))}
                     </div>
-                    <div className="hover:cursor-pointer flex flex-col justify-between duration-500 ease-in-out hidden lg:inline" onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
+                    <div className="hover:cursor-pointer duration-500 ease-in-out hidden md:inline" onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
                         {news.slice(1, 2).map((article) => (
-                            <>
+                            <div className="flex flex-col justify-between h-full">
                                 <div className={`transform-this ${isHovered2 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news syne text-gray-300`}>{article.body}</div>
                                 <div className="title-news syne text-gray-400">{article.title}</div>
-                            </>
+                            </div>
                             ))}
                     </div>
                     <div className="lg:row-start-2 lg:col-start-3">
@@ -130,20 +128,20 @@ function NewsSection({ news, myHomeElementIsVisible }) {
                             <NewsArticle article={article} data="four" onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4} isHovered={isHovered4}></NewsArticle>
                         ))}
                     </div>
-                    <div className="hover:cursor-pointer flex flex-col justify-between lg:row-start-2 lg:col-start-1 duration-500 ease-in-out hidden lg:inline" onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
+                    <div className="hover:cursor-pointer lg:row-start-2 lg:col-start-1 duration-500 ease-in-out hidden md:inline" onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
                         {news.slice(2, 3).map((article) => (
-                            <>
+                            <div className="flex flex-col justify-between h-full">
                                 <div className="title-news-right syne text-gray-400">{article.title}</div>
                                 <div className={`transform-this ${isHovered3 ? 'transformed-up duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news-left syne text-gray-300`}>{article.body}</div>
-                            </>
+                            </div>
                         ))}
                     </div>
-                    <div className="hover:cursor-pointer flex flex-col justify-between lg:row-start-2 lg:col-start-2 duration-500 ease-in-out hidden lg:inline" onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4}>
+                    <div className="hover:cursor-pointer lg:row-start-2 lg:col-start-2 duration-500 ease-in-out hidden md:inline" onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4}>
                         {news.slice(3, 4).map((article) => (
-                            <>
+                            <div className="flex flex-col justify-between h-full">
                                 <div className="title-news-right syne text-gray-400">{article.title}</div>
                                 <div className={`transform-this ${isHovered4 ? 'transformed-up duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news-left syne text-gray-300`}>{article.body}</div>
-                            </>
+                            </div>
                         ))}
                     </div>
                 </div>

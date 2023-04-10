@@ -1,7 +1,9 @@
+import React from 'react';
 import './App.css';
 import Home from "./routes/Home";
 import {useEffect, useState} from "react";
-import React from 'react';
+import {Routes, Route, BrowserRouter as Router} from "react-router-dom";
+import News from "./routes/News";
 function App() {
     const [news, setNews] = useState([])
     const getApi = async (url) => {
@@ -62,7 +64,21 @@ function App() {
 
 
     return (
-        <Home news={news} events={events}></Home>
+        <Router>
+            <Routes>
+                <Route path="/"
+                       element={ <Home
+                                    news={news}
+                                    events={events}
+                       /> }
+                />
+                <Route path="/news"
+                         element={ <News
+                             news={news}
+                         /> }
+                />
+            </Routes>
+        </Router>
     );
 }
 

@@ -26,7 +26,6 @@ function Hero( {setMyHomeElementIsVisible} ) {
             } transition-colors duration-1000`} ref={heroRef} >
             <Navbar />
             <TitleCard isVisible={myElementIsVisible}/>
-            {/*<Socials isVisible={myElementIsVisible}/>*/}
         </div>
     );
 }

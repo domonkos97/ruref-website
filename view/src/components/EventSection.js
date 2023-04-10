@@ -1,6 +1,13 @@
 import {useEffect, useRef, useState} from "react";
+import { gapi } from "gapi-script";
 
 function EventSection( {events} ) {
+
+    const calendarID = process.env.REACT_APP_CALENDAR_ID;
+    const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
+    const accessToken = process.env.REACT_APP_GOOGLE_ACCESS_TOKEN;
+
+
     const eventRef = useRef();
     const [myElementIsVisible, setMyElementIsVisible] = useState(false);
     let options = {
