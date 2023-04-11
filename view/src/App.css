@@ -46,10 +46,11 @@ body, *, html {
 
 
 .transformed {
-    transform: translateY(100px);
+    color: black;
+    opacity: 1;
 }
 .transformed-up {
-    transform: translateY(-100px);
+    color: #121012;
 }
 
 .title-news{
@@ -131,7 +132,7 @@ body, *, html {
 }
 
 .big-text {
-    font-size: 16vw;
+    font-size: 11vw;
     font-weight: bold;
     padding-bottom: 5vh;
 }
@@ -188,25 +189,25 @@ body, *, html {
 
 @media screen and (max-width: 1472px) {
     .ruref-text {
-        font-size: 15vw;
+        font-size: 11vw;
     }
 }
 
 @media screen and (max-width: 1272px) {
     .ruref-text {
-        font-size: 14vw;
+        font-size: 10vw;
     }
 
 }
 
 @media screen and (max-width: 972px) {
     .ruref-text {
-        font-size: 13vw;
+        font-size: 9vw;
     }
 
 }@media screen and (max-width: 772px) {
     .ruref-text {
-        font-size: 19vw;
+        font-size: 8vw;
     }
 
 }
@@ -220,5 +221,22 @@ body, *, html {
     min-height: 100vh;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    background: #0e1217;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.color-purple {
+    color: #ce3df3;
+}
 
 

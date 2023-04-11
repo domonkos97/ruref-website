@@ -1,14 +1,10 @@
 import {useEffect, useRef, useState} from "react";
-import { gapi } from "gapi-script";
 
 function EventSection( {events} ) {
 
-    const calendarID = process.env.REACT_APP_CALENDAR_ID;
-    const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
-    const accessToken = process.env.REACT_APP_GOOGLE_ACCESS_TOKEN;
-
-
     const eventRef = useRef();
+
+
     const [myElementIsVisible, setMyElementIsVisible] = useState(false);
     let options = {
         threshold: 0.3,
@@ -28,8 +24,67 @@ function EventSection( {events} ) {
             observer.disconnect();
         };
     }, []);
-
     console.log("new ", myElementIsVisible)
+
+    let gapi = window.gapi;
+    const CLIENT_ID =  "304776148305-idudq6qapseanaarinma68u9uebos8rj.apps.googleusercontent.com"
+    const API_KEY = "AIzaSyC7bYBHOTBUdI3ATqnmkBp_fcllGxlQSwU"
+    const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
+    const SCOPES = "https://www.googleapis.com/auth/calendar.events"
+
+
+    function handleClick() {
+        gapi.load('client:auth2', () => {
+            console.log("client loaded")
+            gapi.auth2.init({
+                apiKey: API_KEY,
+                clientId: CLIENT_ID,
+                discoveryDocs: DISCOVERY_DOCS,
+                scopes: SCOPES,
+                plugin_name: "plugin"
+            })
+            gapi.client.load('calendar', 'v3', () => console.log("bam"))
+            gapi.auth2.getAuthInstance().signIn({ prompt: 'consent' })
+                .then(()=> {
+                    var event = {
+                        'summary': 'Awesome Event!',
+                        'location': '800 Howard St., San Francisco, CA 94103',
+                        'description': 'Really great refreshments',
+                        'start': {
+                            'dateTime': '2020-06-28T09:00:00-07:00',
+                            'timeZone': 'America/Los_Angeles'
+                        },
+                        'end': {
+                            'dateTime': '2020-06-28T17:00:00-07:00',
+                            'timeZone': 'America/Los_Angeles'
+                        },
+                        'recurrence': [
+                            'RRULE:FREQ=DAILY;COUNT=2'
+                        ],
+                        'attendees': [
+                            {'email': 'lpage@example.com'},
+                            {'email': 'sbrin@example.com'}
+                        ],
+                        'reminders': {
+                            'useDefault': false,
+                            'overrides': [
+                                {'method': 'email', 'minutes': 24 * 60},
+                                {'method': 'popup', 'minutes': 10}
+                            ]
+                        }
+                    }
+                    let request = gapi.client.calendar.events.insert({
+                        'calendarId': 'primary',
+                        'resource': event
+                    })
+
+                    request.execute(event => {
+                        window.open(event.htmlLink)
+                    })
+                })
+        })
+    }
+
     return (
         <div className="flex bg-news" ref={eventRef}>
             <div className="h-5/6 w-5/6  m-auto py-28">
@@ -76,6 +131,9 @@ function EventSection( {events} ) {
                     <hr className="h-px my-8 bg-gray-700 border-0 "></hr>
                 </div>
 
+            </div>
+            <div>
+                <button onClick={handleClick}>Click Me for Events</button>
             </div>
         </div>
     );

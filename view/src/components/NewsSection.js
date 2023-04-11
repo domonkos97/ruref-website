@@ -102,19 +102,17 @@ function NewsSection({ news, myHomeElementIsVisible }) {
                         {news.slice(0, 1).map((article) => (
                             <div className="flex flex-col justify-between h-full">
                                 <div className={`body-news syne text-gray-300
-                                                 ${isHovered1 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}
-                                                 `}>
-                                    {article.body}
+                                                 `}><p className={` syne ${isHovered1 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.body} </p>
                                 </div>
-                                <div className="title-news syne text-gray-400">{article.title}</div>
+                                <div className="title-news syne text-gray-400"><p className={` syne ${isHovered1 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.title} </p></div>
                             </div>
                         ))}
                     </div>
                     <div className="hover:cursor-pointer duration-500 ease-in-out hidden md:inline" onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
                         {news.slice(1, 2).map((article) => (
                             <div className="flex flex-col justify-between h-full">
-                                <div className={`transform-this ${isHovered2 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news syne text-gray-300`}>{article.body}</div>
-                                <div className="title-news syne text-gray-400">{article.title}</div>
+                                <div className={`transform-this body-news syne text-gray-300`}> <p className={` syne ${isHovered2 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.body} </p> </div>
+                                <div className="title-news syne text-gray-400 "><p className={` syne ${isHovered2 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.title} </p></div>
                             </div>
                             ))}
                     </div>
@@ -131,16 +129,16 @@ function NewsSection({ news, myHomeElementIsVisible }) {
                     <div className="hover:cursor-pointer lg:row-start-2 lg:col-start-1 duration-500 ease-in-out hidden md:inline" onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
                         {news.slice(2, 3).map((article) => (
                             <div className="flex flex-col justify-between h-full">
-                                <div className="title-news-right syne text-gray-400">{article.title}</div>
-                                <div className={`transform-this ${isHovered3 ? 'transformed-up duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news-left syne text-gray-300`}>{article.body}</div>
+                                <div className="title-news-right syne text-gray-400"><p className={` syne ${isHovered3 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.title} </p></div>
+                                <div className={`transform-this ${isHovered3 ? 'transformed-up duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news-left syne text-gray-300`}><p className={` syne ${isHovered3 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.body} </p></div>
                             </div>
                         ))}
                     </div>
                     <div className="hover:cursor-pointer lg:row-start-2 lg:col-start-2 duration-500 ease-in-out hidden md:inline" onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4}>
                         {news.slice(3, 4).map((article) => (
                             <div className="flex flex-col justify-between h-full">
-                                <div className="title-news-right syne text-gray-400">{article.title}</div>
-                                <div className={`transform-this ${isHovered4 ? 'transformed-up duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news-left syne text-gray-300`}>{article.body}</div>
+                                <div className="title-news-right syne text-gray-400"><p className={` syne ${isHovered4 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.title} </p></div>
+                                <div className={`transform-this ${isHovered4 ? 'transformed-up duration-500 ease-in-out' : 'duration-500 ease-in-out'} body-news-left syne text-gray-300`}><p className={` syne ${isHovered4 ? 'transformed duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} >{article.body} </p></div>
                             </div>
                         ))}
                     </div>
