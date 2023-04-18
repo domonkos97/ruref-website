@@ -31,7 +31,7 @@ function Hero( {setMyHomeElementIsVisible, setIsMenuOpen, isMenuOpen} ) {
                 <Menu isVisible={myElementIsVisible}/>
             </div>
             <div>
-                <i className="fa-solid fa-angle-down mb-12"></i>
+
             </div>
 
         </div>

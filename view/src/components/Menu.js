@@ -9,7 +9,9 @@ function Menu( {isVisible} ) {
                 <ul className="dot">
                     <li className="text-lg syne text-gray-400  hover:text-black cursor-pointer">calendar</li>
                     <li className="text-lg syne text-gray-400 hover:text-black cursor-pointer">urvacsorak rendje</li>
-                    <li className="text-lg syne text-gray-400 hover:text-black cursor-pointer">camps</li>
+                    <li className="text-lg syne text-gray-400 hover:text-black cursor-pointer">evkozi kirandulasok</li>
+                    <li className="text-lg syne text-gray-400 hover:text-black cursor-pointer">kids events</li>
+                    <li className="text-lg syne text-gray-400 hover:text-black cursor-pointer">summer camps</li>
                 </ul>
             </div>
             <div className="helpers-section">
@@ -20,6 +22,8 @@ function Menu( {isVisible} ) {
                     <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">kantorok</li>
                     <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">presbiterium</li>
                     <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">muszaki bizottsag</li>
+                    <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">marta kor</li>
+                    <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">korus</li>
                 </ul>
             </div>
             <div className="info-section">
@@ -31,6 +35,7 @@ function Menu( {isVisible} ) {
                     <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">blog</li>
                     <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">igehirdetesek</li>
                     <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">kolumbarium</li>
+                    <li className="text-lg  syne text-gray-400 hover:text-black cursor-pointer">weddings</li>
                 </ul>
             </div>
         </div>
