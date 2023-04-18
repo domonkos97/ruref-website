@@ -36,12 +36,18 @@ body, *, html {
 }
 
 .picture {
-    height: 100%;
+    height: 450px;
     width: 100%;
     object-fit: cover;
-    transition: transform .7s ease;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+
+}
+
+.bg-1{
+    background: #efeaf6;
+}
+
+.bg-2{
+    background: #e6e9f6;
 }
 
 
@@ -278,6 +284,9 @@ body, *, html {
     font-size: 0.6rem; /* adjust the font size to make the point smaller */
     margin-right: 5px;
 }
+
+
+
 
 
 
