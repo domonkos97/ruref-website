@@ -4,7 +4,6 @@ import Home from "./routes/Home";
 import {useEffect, useState} from "react";
 import {Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import News from "./routes/News";
-import FullscreenMenu from "./components/FullscreenMenu";
 function App() {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,15 +69,12 @@ function App() {
 
     return (
         <>
-        {isMenuOpen && <FullscreenMenu setIsMenuOpen={setIsMenuOpen}/>}
         <Router>
             <Routes>
                 <Route path="/"
                        element={ <Home
                                     news={news}
                                     events={events}
-                                    isMenuOpen={isMenuOpen}
-                                    setIsMenuOpen={setIsMenuOpen}
                        /> }
                 />
                 <Route path="/news"

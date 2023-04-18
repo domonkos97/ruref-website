@@ -116,11 +116,11 @@ body, *, html {
 }
 
 .bg-default {
-    background: #e3e3e3;
+    background: #F7F1E8;
 }
 
 .bg-news {
-    background: #f1f1f1;
+    background: #fffdf8;
 }
 
 .red-text-color {
@@ -138,7 +138,7 @@ body, *, html {
 }
 
 .secondary-text-color {
-    color: #D99E90;
+    color: #8f8f8f;
 }
 
 .secondary-bg-color {
@@ -244,19 +244,18 @@ body, *, html {
     right: 0;
     bottom: 0;
     left: 0;
+    top: 0;
     background-color: #f1f1f1;
     z-index: 12;
     animation: ease-in-out 0.3s trans;
-    /* other styling */
-
 }
 
 @keyframes trans {
     0% {
-        transform: translateY(100%);
+        transform: translateX(100%);
     }
     100% {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
@@ -264,6 +263,22 @@ body, *, html {
 .zindex0 {
     z-index: -100;
 }
+
+.menu-title,
+.events-menu-title,
+.helpers-menu-title,
+.info-menu-title {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+
+.dot li::before {
+    content: "• "; /* or "\2022" for bullet point*/
+    font-size: 0.6rem; /* adjust the font size to make the point smaller */
+    margin-right: 5px;
+}
+
 
 
 

@@ -42,15 +42,12 @@ function Navbar( {setIsMenuOpen, isMenuOpen, myElementIsVisible} ) {
                 !myElementIsVisible && 'bg-news opacity-0'
             } transition-colors duration-1000`}></div>
             <div className={`navbar flex justify-center sm:justify-between items-center  z-0 w-full pr-28 pl-28 `}>
-                <div className={`menu flex justify-between text-s `}>
-                    <div className="hidden sm:block p-3 pl-0 lg:pl-3 hover:underline cursor-pointer dm-sans">Bejelenkezés</div>
-                    <div className="hidden sm:block p-3 hover:underline cursor-pointer dm-sans">Elérhetőségek</div>
+                <div  className="logo-container">
+                    <span className="logo-spac"><a href="/about" className="logo">LOGO</a></span>
                 </div>
-                <div  className={`hamburger h-16 w-16 flex flex-col justify-center md:items-end items-center cursor-pointer ${
-                    isMenuOpen ? 'open' : ''
-                }`} onClick={handleClick}>
-                    <span className="bar bar-top h-1 w-10 bg-black mb-1"></span>
-                    <span className="bar h-1 w-6 bg-black"></span>
+                <div className={`menu flex justify-between text-s gap-12 `}>
+                    <div className="hidden sm:block p-3 pl-0 lg:pl-3  syne hover:text-gray-400 cursor-pointer dm-sans ">Bejelenkezés</div>
+                    <div className="hidden sm:block p-3 hover:text-gray-400  syne cursor-pointer dm-sans">Elérhetőségek</div>
                 </div>
             </div>
         </>

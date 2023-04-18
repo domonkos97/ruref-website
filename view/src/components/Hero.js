@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import TitleCard from "./TitleCard";
 import {useEffect, useRef, useState} from "react";
+import Menu from "./Menu";
 
 function Hero( {setMyHomeElementIsVisible, setIsMenuOpen, isMenuOpen} ) {
     const heroRef = useRef();
@@ -25,7 +26,14 @@ function Hero( {setMyHomeElementIsVisible, setIsMenuOpen, isMenuOpen} ) {
                 !myElementIsVisible && 'bg-news' 
             } transition-colors duration-1000`} ref={heroRef} >
             <Navbar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} myElementIsVisible={myElementIsVisible}/>
-            <TitleCard isVisible={myElementIsVisible}/>
+            <div className="flex flex-row justify-between items-center pr-28">
+                <TitleCard isVisible={myElementIsVisible}/>
+                <Menu isVisible={myElementIsVisible}/>
+            </div>
+            <div>
+                <i className="fa-solid fa-angle-down mb-12"></i>
+            </div>
+
         </div>
     );
 }
