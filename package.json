@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "googleapis": "^116.0.0",
     "react-parallax": "^3.5.1"
   },
   "devDependencies": {

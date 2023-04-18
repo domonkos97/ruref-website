@@ -212,10 +212,10 @@ body, *, html {
 
 }
 
-.navbar {
-    left: 50%;
-    transform: translateX(-50%);
-}
+/*.navbar {*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*}*/
 
 .news-section {
     min-height: 100vh;
@@ -238,5 +238,34 @@ body, *, html {
 .color-purple {
     color: #ce3df3;
 }
+
+.fullscreen-menu {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    z-index: 12;
+    animation: ease-in-out 0.3s trans;
+    /* other styling */
+
+}
+
+@keyframes trans {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.zindex0 {
+    z-index: -100;
+}
+
+
+
 
 

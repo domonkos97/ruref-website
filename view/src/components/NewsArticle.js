@@ -1,8 +1,23 @@
-function NewsArticle( {article, data, onMouseLeave, onMouseEnter, isHovered} ) {
+function NewsArticle( {article} ) {
     return (
-        <div className={`picture-container z-2 w-full pb-12 md:pb-0`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-            <img className={`picture ${data} ${isHovered ? 'transformed-image duration-500 ease-in-out' : 'duration-500 ease-in-out'}`} src={article.photo} alt="photo"></img>
-            <div className="title-body-news flex justify-between">
+        <div className="article border-2">
+            <div className="title border-2">
+                <p>
+                    {article.title}
+                </p>
+                <p>
+                    written by {article.author}
+                </p>
+            </div>
+            <div className="body border-2">
+                <p>
+                    {article.body}
+                </p>
+            </div>
+            <div className="tag border-2">
+                <p>
+                    {article.title}
+                </p>
             </div>
         </div>
     );

@@ -86,7 +86,7 @@ function EventSection( {events} ) {
     }
 
     return (
-        <div className="flex bg-news" ref={eventRef}>
+        <div className="flex flex-col bg-news" ref={eventRef}>
             <div className="h-5/6 w-5/6  m-auto py-28">
                 <div className={`events-container flex flex-col justify-content bg-news ${myElementIsVisible ? 'events-float-up' : 'events'}`} ref={eventRef}>
                     <p className="text-center text-4xl syne overflow-hidden">Alkalmaink</p>
